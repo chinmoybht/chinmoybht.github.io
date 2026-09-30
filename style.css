@@ -1,8 +1,5 @@
 /* ==========================================================
    Chinmoy Bhattacharjee — website stylesheet
-   You normally never need to edit this file.
-   Layout: one calm text column (~44rem), name + nav at top,
-   hanging-reference lists in the style of a paper's bibliography.
    ========================================================== */
 
 :root {
@@ -274,7 +271,7 @@ td:last-child, th:last-child { padding-right: 0; }
 
 /* ---------- Wide screens: slightly larger text ---------- */
 @media (min-width: 1100px) {
-  :root { --step-0: 1.25rem; --step--1: 1.0625rem; --step-3: 2.8rem; --contact-size: 1.1875rem; }
+  :root { --step-0: 1.15rem; --step--1: 1.06rem; --step-3: 2.6rem; --contact-size: 1.04rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
