@@ -121,7 +121,10 @@
       name: "Boolean model",
       build: function (W, H) {
         // Poisson germs with i.i.d. radii, uniform on [rmin, rmax] (pixels).
-        var m = 40, lambda = 2.6e-4, rmin = 10, rmax = 34;
+        // Intensity chosen for a covered fraction 1 - exp(-lambda * pi * E[R^2]) of about 0.55.
+        var m = 50, rmin = 14, rmax = 44, coverage = 0.55;
+        var ER2 = (Math.pow(rmax, 3) - Math.pow(rmin, 3)) / (3 * (rmax - rmin));
+        var lambda = -Math.log(1 - coverage) / (Math.PI * ER2);
         var x0 = -m, y0 = -m, x1 = W + m, y1 = H + m;
         var n = poisson(lambda * (x1 - x0) * (y1 - y0)), discs = [];
         for (var i = 0; i < n; i++) {
