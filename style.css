@@ -332,3 +332,9 @@ td:last-child, th:last-child { padding-right: 0; }
 /* ---------- Coauthor links: quiet until hovered ---------- */
 .bib .authors a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 0.18em; }
 .bib .authors a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* ---------- Home: medium-height header, no caption ---------- */
+.site-header.medium .wrap { padding-block: 1.6rem 5rem; }
+@media (max-width: 640px) {
+  .site-header.medium .wrap { padding-block: 1.6rem 3.5rem; }
+}
