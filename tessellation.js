@@ -231,7 +231,7 @@
     ctx.globalAlpha = 1;
 
     var label = document.querySelector("[data-tess-label]");
-    if (label) label.textContent = model.name + ", " + count + (S.kind === "discs" ? " germs" : " cells");
+    if (label) label.textContent = model.name;
   }
 
   // ---------- setup ----------
@@ -263,15 +263,17 @@
           "border:0;padding:0 .3rem;margin:0;cursor:pointer}" +
           ".tess-note .tess-bar button:hover{text-decoration:underline;text-underline-offset:.18em}" +
           ".tess-note .tess-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}" +
-          ".tess-note .tess-sep{color:var(--muted)}";
+          ".tess-note .tess-sep{color:var(--muted);padding:0 .15rem}" +
+          ".tess-note .tess-acts{white-space:nowrap;display:inline-flex;align-items:baseline}";
         document.head.appendChild(st);
       }
       var bar = document.createElement("div");
       bar.className = "tess-bar";
-      bar.innerHTML = '<span class="tess-cap"><span data-tess-label>…</span>, sampled on this visit.</span>' +
+      bar.innerHTML = '<span class="tess-cap" data-tess-label>…</span>' +
+        '<span class="tess-acts"><span class="tess-sep" aria-hidden="true">·</span>' +
         '<button type="button" data-act="resample" title="Draw a new sample of this model">Resample</button>' +
         '<span class="tess-sep" aria-hidden="true">·</span>' +
-        '<button type="button" data-act="next" title="Show the next model">Next model</button>';
+        '<button type="button" data-act="next" title="Show the next model">Next model</button></span>';
       old.parentNode.replaceChild(bar, old);
       bar.addEventListener("click", function (e) {
         var b = e.target.closest ? e.target.closest("button") : null;
