@@ -338,3 +338,17 @@ td:last-child, th:last-child { padding-right: 0; }
 @media (max-width: 640px) {
   .site-header.medium .wrap { padding-block: 1.6rem 3.5rem; }
 }
+
+/* ---------- Link icons (Academicons and Font Awesome, loaded in the page head) ---------- */
+.links span[aria-hidden], .profile-links span[aria-hidden] { margin-right: 0.35em; font-size: 1.05em; }
+.links { row-gap: 0.25rem; }
+
+/* ---------- Home: keyword line under the affiliation ---------- */
+.keywords { color: var(--muted); }
+
+/* ---------- Phones: small photo beside the name ---------- */
+@media (max-width: 640px) {
+  .intro { position: relative; }
+  .portrait { position: absolute; top: 0; right: 0; width: 6rem; order: 0; }
+  .intro h1, .intro .role { padding-right: 7rem; }
+}

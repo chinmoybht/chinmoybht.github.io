@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,6 +36,18 @@
       <p class="muted">Full list also on <a href="https://scholar.google.com/citations?user=3xoz7yUAAAAJ&amp;hl=en">Google Scholar</a> and <a href="https://orcid.org/0000-0002-1752-2249">ORCID</a>.</p>
     </section>
 
+    <!-- ===================== OVERVIEW ===================== -->
+    <section>
+      <h2>Overview</h2>
+      <div class="prose">
+        <p>My research concerns quantitative limit theory for random spatial structures and has three connected strands.</p>
+        <p><b>Distributional approximation and Stein’s method.</b> Many quantities in stochastic geometry and random graphs are sums of local contributions with intricate dependence, and the basic question is how close their distribution is to a limit law, in an explicit probability metric. For Gaussian limits, we have developed a Malliavin–Stein framework for Poisson functionals that stabilize on regions other than balls, which makes models with long-range interactions accessible, such as minimal points of a Poisson process and birth–growth models <a href="https://arxiv.org/abs/2101.05103">[6]</a>. A second line concerns non-Gaussian limits, in particular the Dickman distribution, which appears for weighted sums in probabilistic number theory, the analysis of algorithms and random trees; here we obtained the first approximation bounds in the Kolmogorov distance <a href="https://arxiv.org/abs/2211.10171">[8]</a>.</p>
+        <p><b>Superconcentration, chaos and noise sensitivity.</b> The second strand asks how large fluctuations are and how they react to small perturbations of the underlying randomness. The Poincaré inequality gives a general upper bound on the variance of a Poisson functional, and a functional is called superconcentrated if its variance is of smaller order. We show that superconcentration is equivalent to chaos, that is, to decorrelation under a small perturbation by the Ornstein–Uhlenbeck (spatial birth–death) dynamics, a Poisson analogue of Chatterjee’s theory for Gaussian fields <a href="https://arxiv.org/abs/2603.23053">[11]</a>. For crossing events in continuum percolation, we introduce a spectral point process of a Poisson functional, the counterpart of the spectral sample of a Boolean function, and use it to prove sharp noise sensitivity in planar Poisson–Voronoi percolation and sharp noise instability in the critical Poisson Boolean model <a href="https://arxiv.org/abs/2407.13502">[13]</a>.</p>
+        <p><b>Statistical applications.</b> Procedures based on nearest neighbours and data-adaptive partitions produce outputs that are stabilizing functionals of the sample, so the same tools quantify how accurate the Gaussian approximations used for inference are, in terms of the sample size and tuning parameters. We prove multivariate Gaussian approximation bounds for random forest predictions based on potential nearest neighbours, via a general result for region-based stabilizing functionals <a href="https://arxiv.org/abs/2403.09960">[12]</a>, and Gaussian and bootstrap approximation bounds for matching-based estimators of average treatment effects, which yield non-asymptotically valid confidence intervals <a href="https://arxiv.org/abs/2412.17181">[9]</a>.</p>
+      </div>
+    </section>
+
+    <!-- INTERESTS: hidden for now. To show it again, delete this line and the line "END OF HIDDEN INTERESTS" below.
     <section>
       <h2>Interests</h2>
       <ul class="interests">
@@ -45,6 +59,7 @@
         <li>Nonparametric inference</li>
       </ul>
     </section>
+    END OF HIDDEN INTERESTS -->
 
     <!-- ===================== PREPRINTS =====================
          To add a new preprint: copy one <li> ... </li> block below,
@@ -57,8 +72,7 @@
           <span class="key">[15]</span>
           <div class="entry">
             <span class="title">Dickman approximation of randomly weighted sums via Stein’s method</span>
-            <span class="venue status">Submitted.</span>
-            <span class="links"><a href="https://arxiv.org/abs/2606.27875">arXiv:2606.27875</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2606.27875"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2606.27875</a><a href="slides/Oxford_26.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Oxford 2026)</a></span>
           </div>
         </li>
         <li>
@@ -66,8 +80,7 @@
           <div class="entry">
             <span class="title">Gaussian approximation for extreme points in Laguerre tessellations</span>
             <span class="authors">with <a href="https://www.uni-muenster.de/Stochastik/Arbeitsgruppen/Gusakova/">Anna Gusakova</a></span>
-            <span class="venue status">Submitted.</span>
-            <span class="links"><a href="https://arxiv.org/abs/2510.21665">arXiv:2510.21665</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2510.21665"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2510.21665</a><a href="slides/Dubrovnik_27_10_25.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Dubrovnik 2025)</a></span>
           </div>
         </li>
         <li>
@@ -75,8 +88,7 @@
           <div class="entry">
             <span class="title">Spectra of Poisson functionals and applications to continuum percolation</span>
             <span class="authors">with <a href="https://sites.google.com/site/giovannipeccati/home">Giovanni Peccati</a> and <a href="https://sites.google.com/site/yogeshwaranacademics/">D. Yogeshwaran</a></span>
-            <span class="venue status">Submitted.</span>
-            <span class="links"><a href="https://arxiv.org/abs/2407.13502">arXiv:2407.13502</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2407.13502"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2407.13502</a><a href="slides/Slides_Oxford.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Oxford 2024)</a></span>
           </div>
         </li>
         <li>
@@ -84,8 +96,7 @@
           <div class="entry">
             <span class="title">Multivariate Gaussian approximation for random forest via region-based stabilization</span>
             <span class="authors">with <a href="https://sites.google.com/view/kriznakumar/home">Krishnakumar Balasubramanian</a>, <a href="https://www.stat.ucdavis.edu/~polonik/WP-personal-home.html">Wolfgang Polonik</a> and <a href="https://10mzys.github.io/website/">Zhaoyang Shi</a></span>
-            <span class="venue status">Submitted.</span>
-            <span class="links"><a href="https://arxiv.org/abs/2403.09960">arXiv:2403.09960</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2403.09960"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2403.09960</a></span>
           </div>
         </li>
         <li>
@@ -93,8 +104,7 @@
           <div class="entry">
             <span class="title">Chaos and superconcentration for Poisson functionals with applications in stochastic geometry</span>
             <span class="authors">with <a href="https://www.math.uni-hamburg.de/en/forschung/bereiche/st/math-stoch/personen/oclarey-rowan.html">Rowan O’Clarey</a></span>
-            <span class="venue status">Major revision, <i>Electronic Journal of Probability</i>.</span>
-            <span class="links"><a href="https://arxiv.org/abs/2603.23053">arXiv:2603.23053</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2603.23053"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2603.23053</a></span>
           </div>
         </li>
       </ol>
@@ -112,7 +122,7 @@
             <span class="title">Perimeter length of the convex hull of Brownian motion in the hyperbolic plane</span>
             <span class="authors">with <a href="https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/people/dr-r-rik-versendaal">Rik Versendaal</a> and <a href="https://www.maths.dur.ac.uk/users/andrew.wade/">Andrew Wade</a></span>
             <span class="venue"><i>Journal of Applied Probability</i> (2026)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2502.15340">arXiv:2502.15340</a><a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/perimeter-length-of-the-convex-hull-of-brownian-motion-in-the-hyperbolic-plane/9DED2FA04F731DD6C9C84823BA0DFB12">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2502.15340"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2502.15340</a><a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/perimeter-length-of-the-convex-hull-of-brownian-motion-in-the-hyperbolic-plane/9DED2FA04F731DD6C9C84823BA0DFB12"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a></span>
           </div>
         </li>
         <li>
@@ -121,7 +131,7 @@
             <span class="title">Gaussian and bootstrap approximation for matching-based average treatment effect estimators</span>
             <span class="authors">with <a href="https://sites.google.com/view/kriznakumar/home">Krishnakumar Balasubramanian</a>, <a href="https://www.stat.ucdavis.edu/~polonik/WP-personal-home.html">Wolfgang Polonik</a> and <a href="https://10mzys.github.io/website/">Zhaoyang Shi</a></span>
             <span class="venue"><i>Annals of Statistics</i> <b>54</b>(4), 2164–2190 (2026)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2412.17181">arXiv:2412.17181</a><a href="https://projecteuclid.org/journals/annals-of-statistics/volume-54/issue-4/Gaussian-and-bootstrap-approximation-for-matching-based-average-treatment-effect/10.1214/26-AOS2647.short">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2412.17181"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2412.17181</a><a href="https://projecteuclid.org/journals/annals-of-statistics/volume-54/issue-4/Gaussian-and-bootstrap-approximation-for-matching-based-average-treatment-effect/10.1214/26-AOS2647.short"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Lugano_26.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Lugano 2026)</a></span>
           </div>
         </li>
         <li>
@@ -130,7 +140,7 @@
             <span class="title">Dickman approximation of weighted sums of independent random variables in the Kolmogorov distance</span>
             <span class="authors">with <a href="https://www.mat.tuhh.de/home/mschulte_en">Matthias Schulte</a></span>
             <span class="venue"><i>Annals of Applied Probability</i> <b>35</b>(5), 3271–3309 (2025)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2211.10171">arXiv:2211.10171</a><a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-35/issue-5/Dickman-approximation-of-weighted-sums-of-independent-random-variables-in/10.1214/25-AAP2194.short">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2211.10171"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2211.10171</a><a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-35/issue-5/Dickman-approximation-of-weighted-sums-of-independent-random-variables-in/10.1214/25-AAP2194.short"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Oxford_26.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Related talk (Oxford 2026)</a></span>
           </div>
         </li>
         <li>
@@ -139,7 +149,7 @@
             <span class="title">Central limit theorem for a birth–growth model with Poisson arrivals and random growth speed</span>
             <span class="authors">with <a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_molchanov_ilya/index_eng.html">Ilya Molchanov</a> and <a href="https://www.imsv.unibe.ch/ueber_uns/personen/turin_riccardo/index_ger.html">Riccardo Turin</a></span>
             <span class="venue"><i>Advances in Applied Probability</i> <b>56</b>(3), 1004–1032 (2024)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2107.06792">arXiv:2107.06792</a><a href="https://doi.org/10.1017/apr.2023.58">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2107.06792"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2107.06792</a><a href="https://doi.org/10.1017/apr.2023.58"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides_NUS.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Related talk (Singapore 2022)</a><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=5bbf9259-6a37-4b62-ac01-aebb0093cac3"><span class="fa-solid fa-circle-play" aria-hidden="true"></span>Video</a></span>
           </div>
         </li>
         <li>
@@ -148,7 +158,7 @@
             <span class="title">Gaussian approximation for sums of region-stabilizing scores</span>
             <span class="authors">with <a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_molchanov_ilya/index_eng.html">Ilya Molchanov</a></span>
             <span class="venue"><i>Electronic Journal of Probability</i> <b>27</b>, paper no. 111 (2022)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2101.05103">arXiv:2101.05103</a><a href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-27/issue-none/Gaussian-approximation-for-sums-of-region-stabilizing-scores/10.1214/22-EJP832.full">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2101.05103"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2101.05103</a><a href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-27/issue-none/Gaussian-approximation-for-sums-of-region-stabilizing-scores/10.1214/22-EJP832.full"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides_NUS.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Related talk (Singapore 2022)</a><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=5bbf9259-6a37-4b62-ac01-aebb0093cac3"><span class="fa-solid fa-circle-play" aria-hidden="true"></span>Video</a></span>
           </div>
         </li>
         <li>
@@ -156,7 +166,7 @@
           <div class="entry">
             <span class="title">Gaussian approximation for rooted edges in a random minimal directed spanning tree</span>
             <span class="venue"><i>Random Structures &amp; Algorithms</i> <b>61</b>(3), 462–492 (2022)</span>
-            <span class="links"><a href="https://arxiv.org/abs/2105.00320">arXiv:2105.00320</a><a href="https://onlinelibrary.wiley.com/share/author/N8V34MTMZVQVNFNINWPF?target=10.1002/rsa.21068">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/2105.00320"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:2105.00320</a><a href="https://onlinelibrary.wiley.com/share/author/N8V34MTMZVQVNFNINWPF?target=10.1002/rsa.21068"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides_NUS.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Related talk (Singapore 2022)</a><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=5bbf9259-6a37-4b62-ac01-aebb0093cac3"><span class="fa-solid fa-circle-play" aria-hidden="true"></span>Video</a></span>
           </div>
         </li>
         <li>
@@ -165,7 +175,7 @@
             <span class="title">Large degrees in scale-free inhomogeneous random graphs</span>
             <span class="authors">with <a href="https://www.mat.tuhh.de/home/mschulte_en">Matthias Schulte</a></span>
             <span class="venue"><i>Annals of Applied Probability</i> <b>32</b>(1), 696–720 (2022)</span>
-            <span class="links"><a href="https://arxiv.org/abs/1910.01627">arXiv:1910.01627</a><a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-32/issue-1/Large-degrees-in-scale-free-inhomogeneous-random-graphs/10.1214/21-AAP1693.full">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/1910.01627"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:1910.01627</a><a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-32/issue-1/Large-degrees-in-scale-free-inhomogeneous-random-graphs/10.1214/21-AAP1693.full"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides_Sheffield.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Sheffield 2023)</a></span>
           </div>
         </li>
         <li>
@@ -174,7 +184,7 @@
             <span class="title">Convergence to scale-invariant Poisson processes and applications in Dickman approximation</span>
             <span class="authors">with <a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_molchanov_ilya/index_eng.html">Ilya Molchanov</a></span>
             <span class="venue"><i>Electronic Journal of Probability</i> <b>25</b>, paper no. 79 (2020)</span>
-            <span class="links"><a href="https://arxiv.org/abs/1911.06229">arXiv:1911.06229</a><a href="https://projecteuclid.org/euclid.ejp/1594432887">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/1911.06229"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:1911.06229</a><a href="https://projecteuclid.org/euclid.ejp/1594432887"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides_Sandbjerg.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Sandbjerg 2019)</a></span>
           </div>
         </li>
         <li>
@@ -183,7 +193,7 @@
             <span class="title">Dickman approximation in simulation, summations and perpetuities</span>
             <span class="authors">with <a href="https://dornsife.usc.edu/larry-goldstein/">Larry Goldstein</a></span>
             <span class="venue"><i>Bernoulli</i> <b>25</b>(4A), 2758–2792 (2019)</span>
-            <span class="links"><a href="https://arxiv.org/abs/1706.08192">arXiv:1706.08192</a><a href="https://projecteuclid.org/euclid.bj/1568362042">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/1706.08192"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:1706.08192</a><a href="https://projecteuclid.org/euclid.bj/1568362042"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Slides.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Bern 2019)</a></span>
           </div>
         </li>
         <li>
@@ -192,7 +202,7 @@
             <span class="title">On strong embeddings by Stein’s method</span>
             <span class="authors">with <a href="https://dornsife.usc.edu/larry-goldstein/">Larry Goldstein</a></span>
             <span class="venue"><i>Electronic Journal of Probability</i> <b>21</b>, paper no. 15 (2016)</span>
-            <span class="links"><a href="https://arxiv.org/abs/1505.03199">arXiv:1505.03199</a><a href="https://projecteuclid.org/euclid.ejp/1456412955">journal</a></span>
+            <span class="links"><a href="https://arxiv.org/abs/1505.03199"><span class="ai ai-arxiv" aria-hidden="true"></span>arXiv:1505.03199</a><a href="https://projecteuclid.org/euclid.ejp/1456412955"><span class="fa-regular fa-file-lines" aria-hidden="true"></span>Journal</a><a href="slides/Strong_Embedding.pdf"><span class="fa-solid fa-person-chalkboard" aria-hidden="true"></span>Slides (Los Angeles 2016)</a></span>
           </div>
         </li>
       </ol>
@@ -206,7 +216,7 @@
           <div class="entry">
             <span class="title">Stein’s method and its applications in strong embeddings and Dickman approximations</span>
             <span class="venue">PhD thesis, University of Southern California (2018). Advisor: Larry Goldstein.</span>
-            <span class="links"><a href="https://www.proquest.com/docview/2178730131">ProQuest</a></span>
+            <span class="links"><a href="https://www.proquest.com/docview/2178730131"><span class="fa-solid fa-book" aria-hidden="true"></span>ProQuest</a></span>
           </div>
         </li>
       </ol>
