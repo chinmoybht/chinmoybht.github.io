@@ -207,11 +207,10 @@ p { margin: 0; }
 
 /* ---------- Research interests with MSC codes ---------- */
 .interests { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem 2rem; }
-.interests li { display: flex; gap: 0.75rem; align-items: baseline; min-width: 0; }
-.interests .msc { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); min-width: 3.8rem; font-variant-numeric: tabular-nums; }
+.interests li { min-width: 0; }
 
 /* ---------- Bibliography ---------- */
-.bib { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.15rem; }
+.bib { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; line-height: 1.45; }
 .bib li {
   display: grid;
   grid-template-columns: 2.6rem minmax(0, 1fr);
@@ -222,13 +221,17 @@ p { margin: 0; }
   font-variant-numeric: lining-nums tabular-nums;
   text-align: right;
 }
-.bib .entry { min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
+.bib .entry { min-width: 0; display: flex; flex-direction: column; gap: 0; }
 .bib .title { font-weight: 600; }
 .bib .authors { color: var(--ink); }
 .bib .venue { color: var(--muted); }
 .bib .venue i { color: var(--ink); }
-.bib .links { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--mono); font-size: 0.85rem; margin-top: 0.15rem; }
+.bib .links { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--mono); font-size: 0.85rem; margin-top: 0.05rem; }
 .status { font-style: italic; }
+
+/* ---------- Supervision list (teaching) ---------- */
+.people h3 { font-size: var(--step-0); font-weight: 600; margin-top: 0.4rem; }
+.people ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
 
 /* ---------- Tables (teaching) ---------- */
 .table-scroll { overflow-x: auto; }
@@ -276,4 +279,36 @@ td:last-child, th:last-child { padding-right: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* ---------- Poisson–Voronoi tessellation behind the header (tall on Home, thin band elsewhere) ---------- */
+.site-header { position: relative; overflow: hidden; isolation: isolate; }
+.tess {
+  position: absolute; inset: 0; z-index: -1; display: block;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, #000 50%, #000 62%, transparent 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, #000 50%, #000 62%, transparent 100%);
+}
+.site-name, .site-nav a { text-shadow: 0 0 6px var(--paper), 0 0 12px var(--paper); }
+/* Other pages: the tessellation shows as a thin band behind the name and menu. */
+.site-header:not(.hero) .wrap { padding-block: 1.6rem 1.5rem; }
+.hero .tess-note {
+  display: flex; justify-content: flex-end;
+  padding-block: 6.5rem 0.75rem;
+}
+.tess-note button {
+  font: italic var(--step--1)/1.4 var(--serif);
+  color: var(--muted);
+  background: var(--paper);
+  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  border: 0; border-radius: 2px;
+  padding: 0.15rem 0.5rem; margin-right: -0.5rem;
+  cursor: pointer; text-align: right;
+}
+.tess-note button:hover .resample { text-decoration: underline; text-underline-offset: 0.18em; }
+.tess-note button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tess-note .resample { font-style: normal; color: var(--accent); margin-left: 0.35rem; }
+.tess-note .n { font-style: normal; font-variant-numeric: lining-nums; }
+@media (max-width: 640px) {
+  .hero .tess-note { padding-block: 4.5rem 0.6rem; }
 }
