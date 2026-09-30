@@ -1,6 +1,7 @@
 /* Draws a faint random spatial structure behind the page header.
-   Five models are shown in turn: each visit shows the next one, and the
-   caption on the Home page ("Next model") switches to the next one.
+   Five models are shown in turn: each visit shows the next one. On the
+   Home page, "Resample" draws a new sample of the current model and
+   "Next model" switches to the next one.
 
      1. Poisson–Voronoi tessellation
      2. Boolean model (union of random discs around Poisson germs)
@@ -248,13 +249,37 @@
     if (!canvas || !canvas.getContext) return;
     var idx = loadIndex();
 
-    var btn = document.querySelector("[data-tess-resample]");
-    if (btn) {
-      btn.innerHTML = '<span data-tess-label>…</span>, sampled on this visit.<span class="resample">Next model</span>';
-      btn.title = "Show the next model";
-      btn.addEventListener("click", function () {
-        idx = (idx + 1) % MODELS.length;
-        try { window.localStorage.setItem(STORE_KEY, String(idx)); } catch (e) {}
+    // Home page: replace the caption button by a caption and two buttons.
+    var old = document.querySelector("[data-tess-resample]");
+    if (old) {
+      if (!document.getElementById("tess-style")) {
+        var st = document.createElement("style");
+        st.id = "tess-style";
+        st.textContent =
+          ".tess-note .tess-bar{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:baseline;gap:.15rem .1rem;" +
+          "background:var(--paper);background:color-mix(in srgb,var(--paper) 82%,transparent);border-radius:2px;padding:.15rem .5rem;margin-right:-.5rem}" +
+          ".tess-note .tess-cap{font:italic var(--step--1)/1.4 var(--serif);color:var(--muted)}" +
+          ".tess-note .tess-bar button{font:var(--step--1)/1.4 var(--serif);font-style:normal;color:var(--accent);background:none;" +
+          "border:0;padding:0 .3rem;margin:0;cursor:pointer}" +
+          ".tess-note .tess-bar button:hover{text-decoration:underline;text-underline-offset:.18em}" +
+          ".tess-note .tess-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}" +
+          ".tess-note .tess-sep{color:var(--muted)}";
+        document.head.appendChild(st);
+      }
+      var bar = document.createElement("div");
+      bar.className = "tess-bar";
+      bar.innerHTML = '<span class="tess-cap"><span data-tess-label>…</span>, sampled on this visit.</span>' +
+        '<button type="button" data-act="resample" title="Draw a new sample of this model">Resample</button>' +
+        '<span class="tess-sep" aria-hidden="true">·</span>' +
+        '<button type="button" data-act="next" title="Show the next model">Next model</button>';
+      old.parentNode.replaceChild(bar, old);
+      bar.addEventListener("click", function (e) {
+        var b = e.target.closest ? e.target.closest("button") : null;
+        if (!b) return;
+        if (b.getAttribute("data-act") === "next") {
+          idx = (idx + 1) % MODELS.length;
+          try { window.localStorage.setItem(STORE_KEY, String(idx)); } catch (err) {}
+        }
         draw(canvas, idx);
       });
     }
