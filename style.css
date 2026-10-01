@@ -351,3 +351,6 @@ td:last-child, th:last-child { padding-right: 0; }
 
 /* ---------- Research: overview strands ---------- */
 .overview { gap: 0.6rem; }
+
+/* ---------- Video link after a talk ---------- */
+.video-link { margin-left: 0.75em; white-space: nowrap; }
