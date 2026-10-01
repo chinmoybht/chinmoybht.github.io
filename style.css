@@ -355,7 +355,7 @@ td:last-child, th:last-child { padding-right: 0; }
 /* ---------- Video link after a talk ---------- */
 .video-link { margin-left: 0.75em; white-space: nowrap; }
 
-/* Justified overview text on larger screens */
+/* Justified text in the research paragraphs (Home and Research pages), larger screens only */
 @media (min-width: 641px) {
-  .overview p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  .prose p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 }
