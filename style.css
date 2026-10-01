@@ -340,8 +340,7 @@ td:last-child, th:last-child { padding-right: 0; }
 }
 
 /* ---------- Link icons (Academicons and Font Awesome, loaded in the page head) ---------- */
-.links span[aria-hidden], .profile-links span[aria-hidden] { margin-right: 0.35em; font-size: 1.05em; }
-.links { row-gap: 0.25rem; }
+.links span[aria-hidden], .profile-links span[aria-hidden], .dated span[aria-hidden] { margin-right: 0.35em; font-size: 1.05em; }.links { row-gap: 0.25rem; }
 
 /* ---------- Phones: small photo beside the name ---------- */
 @media (max-width: 640px) {
