@@ -175,7 +175,7 @@ p { margin: 0; }
 .contact dt { color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; padding-top: 0.2rem; }
 .contact dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 
-.profile-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: var(--contact-size); margin-top: 0.7rem; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.75rem; font-size: var(--contact-size); margin-top: 0.7rem; }
 
 /* ---------- Dated lists (news, positions) ---------- */
 .dated { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
