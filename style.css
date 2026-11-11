@@ -487,3 +487,7 @@ td:last-child, th:last-child { padding-right: 0; }
 @media (min-width: 641px) {
   .prose p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 }
+
+/* ---------- "Last updated" date in the footer of every page ----------
+   Change the date here only; all pages pick it up. */
+.last-updated::before { content: "Last updated November 2026"; }
